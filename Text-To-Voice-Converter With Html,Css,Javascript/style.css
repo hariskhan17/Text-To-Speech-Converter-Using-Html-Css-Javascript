@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    box-sizing: border-box;
+  }
+  
+  .hero {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #010758, #490d61);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px; /* Added padding for better spacing on smaller screens */
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  .hero h1 {
+    font-size: 45px;
+    font-weight: 500;
+    margin-top: -50px;
+    margin-bottom: 50px;
+    color: #fff;
+    text-align: center; /* Center text for better alignment on small screens */
+    animation: slideInDown 1s ease-in-out;
+  }
+  
+  .hero h1 span {
+    color: #ff2963;
+  }
+  
+  textarea {
+    width: 100%; /* Make the textarea responsive */
+    max-width: 600px; /* Max width for larger screens */
+    height: 250px;
+    background: #403d84;
+    color: #fff;
+    font-size: 15px;
+    border: 0;
+    outline: 0;
+    padding: 20px;
+    border-radius: 10px;
+    resize: none;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  textarea:hover {
+    transform: scale(1.02);
+  }
+  
+  textarea::placeholder {
+    font-size: 16px;
+    color: #ddd;
+  }
+  
+  .row {
+    width: 100%; /* Make the row responsive */
+    max-width: 600px; /* Max width for larger screens */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    animation: slideInUp 1s ease-in-out;
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+  }
+  
+  button {
+    background: #ff2963;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 30px;
+    border-radius: 35px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content in the button */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.3s ease;
+    width: 100%; /* Button takes full width on small screens */
+    max-width: 200px; /* Restrict width on larger screens */
+  }
+  
+  button:hover {
+    background: #ff1a53;
+    transform: scale(1.05);
+  }
+  
+  button img {
+    width: 16px;
+    margin-right: 10px;
+  }
+  
+  select {
+    flex: 1;
+    color: #fff;
+    background: #403d84;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 20px;
+    outline: 0;
+    border: 0;
+    border-radius: 35px;
+    appearance: none;
+    background-image: url(images/dropdown.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: right 20px center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    width: 100%; /* Make select responsive */
+  }
+  
+  select:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInDown {
+    from {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInUp {
+    from {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 35px;
+      margin-top: 0; /* Adjust margin for better spacing */
+    }
+  
+    textarea, .row {
+      width: 100%; /* Full width for smaller screens */
+    }
+  
+    textarea {
+      height: 200px; /* Adjust height for better usability on mobile */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero h1 {
+      font-size: 28px;
+      margin-bottom: 30px; /* Reduce bottom margin for better spacing */
+    }
+  
+    button {
+      font-size: 14px;
+      padding: 8px 20px;
+      max-width: none; /* Remove max width to allow full width */
+    }
+  
+    textarea {
+      height: 150px; /* Further adjust height for small screens */
+    }
+  
+    .row {
+      gap: 10px; /* Reduce gap for small screens */
+    }
+  
+    button img {
+      margin-right: 5px; /* Adjust spacing for icon */
+    }
+  }
+  
